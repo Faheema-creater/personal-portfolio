@@ -1,0 +1,280 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+
+<style>
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#b76cff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#ddd;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00d9ff;
+}
+.hire-btn{
+    padding:12px 20px;
+    /* width: 40px; */
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    background:linear-gradient(45deg,#8d5cff,#00d9ff);
+}
+
+
+button {
+  width: auto;             /* Prevents stretching */
+  padding: 10px 24px;      /* Controls size via internal spacing */
+  max-width: 150px;        /* Sets a strict upper limit */
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#05081f;
+    color:white;
+    min-height:100vh;
+    padding:30px;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+    background-size:50px 50px;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:85vh;
+    gap:50px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.status{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 25px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    margin-bottom:30px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#00ff88;
+}
+
+.hero h1{
+    font-size:90px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.name{
+    background:linear-gradient(
+    90deg,
+    #5f7fff,
+    #c05cff,
+    #00d9ff);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+    font-size:24px;
+    line-height:1.8;
+    color:#cfcfcf;
+    max-width:800px;
+}
+
+.buttons{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    padding:18px 35px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.resume-btn{
+    background:linear-gradient(
+    90deg,
+    #5f7fff,
+    #c05cff,
+    #00d9ff);
+}
+
+.contact-btn{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.skills-link{
+    display:flex;
+    align-items:center;
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:550px;
+    height:550px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid #9b5cff;
+
+    box-shadow:
+    0 0 40px rgba(155,92,255,0.6),
+    0 0 80px rgba(0,217,255,0.3);
+}
+
+@media(max-width:1000px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero-image img{
+    width:320px;
+    height:320px;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar">
+
+<div class="logo">✦ Faheema</div>
+
+<div class="nav-links">
+<a href="{%url 'home'%}">Home</a>
+<a href="{%url 'about'%}">About</a>
+<a href="{%url 'education'%}">Education</a>
+<a href="{%url 'skills'%}">Skills</a>
+<a href="{%url 'experience'%}">Experience</a>
+<a href="{%url 'achievements'%}">Achievements</a>
+<a href="{%url 'contact'%}">Contact</a>
+</div>
+<br>
+<button class="hire-btn">Hire Me</button>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+<br>
+<div class="status">
+<div class="dot"></div>
+Available for opportunities
+</div>
+
+<h1>
+Hi, I'm <br>
+<span class="name">Faheema MZ.</span><br>
+Data Analyst
+</h1>
+
+<p>
+I'm an aspiring Data Analyst and BCA student passionate
+about turning raw data into actionable insights through
+analytics, visualization and problem-solving.
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn resume-btn">
+⬇ Download Resume
+</a>
+
+<a href="contact.html" class="btn contact-btn">
+✉ Contact Me
+</a>
+
+<a href="skills.html" class="skills-link">
+View Skills →
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+<img src="{% static 'assests\images\pic.jpeg' %}" alt="Profile">
+</div>
+
+</section>
+
+</body>
+</html>

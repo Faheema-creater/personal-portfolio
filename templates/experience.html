@@ -1,0 +1,248 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#05081f;
+    color:white;
+    min-height:100vh;
+    padding:20px;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+    background-size:50px 50px;
+}
+
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#b76cff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#ddd;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00d9ff;
+}
+
+.hire-btn{
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    background:linear-gradient(45deg,#8d5cff,#00d9ff);
+}
+
+/* Heading */
+
+.heading{
+    text-align:center;
+    margin-top:50px;
+}
+
+.tag{
+    display:inline-block;
+    padding:10px 25px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.05);
+    color:#ccc;
+    letter-spacing:3px;
+    margin-bottom:25px;
+}
+
+.heading h1{
+    font-size:72px;
+    background:linear-gradient(
+    90deg,
+    #5f7fff,
+    #b35cff,
+    #00d9ff);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Cards */
+
+.cards{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    padding:35px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    background:linear-gradient(
+    45deg,
+    #b35cff,
+    #00d9ff);
+
+    margin-bottom:25px;
+}
+
+.card h2{
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+.card p{
+    color:#cfcfcf;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.heading h1{
+    font-size:45px;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+
+<div class="logo">✦ Faheema</div>
+
+<div class="nav-links">
+<a href="{%url 'home'%}">Home</a>
+<a href="{%url 'about'%}">About</a>
+<a href="{%url 'education'%}">Education</a>
+<a href="{%url 'skills'%}">Skills</a>
+<a href="{%url 'experience'%}">Experience</a>
+<a href="{%url 'achievements'%}">Achievements</a>
+<a href="{%url 'contact'%}">Contact</a>
+</div>
+
+<button class="hire-btn">Hire Me</button>
+
+</nav>
+
+<section class="heading">
+
+<div class="tag">EXPERIENCE</div>
+
+<h1>Where I am now</h1>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+
+<div class="icon">🎁</div>
+
+<h2>Fresher</h2>
+
+<p>
+Starting my professional journey with curiosity,
+dedication and a strong desire to learn.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🚀</div>
+
+<h2>Open to Internships</h2>
+
+<p>
+Looking for entry-level Data Analytics,
+Business Intelligence and Web Development
+opportunities.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">🧠</div>
+
+<h2>Always Learning</h2>
+
+<p>
+Building expertise through coursework,
+certifications, personal projects and
+continuous practice.
+</p>
+
+</div>
+
+</section>
+
+</body>
+</html>

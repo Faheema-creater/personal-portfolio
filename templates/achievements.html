@@ -1,0 +1,272 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achievements</title>
+
+<style>
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#b76cff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#ddd;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00d9ff;
+}
+.tag {
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    color:#ccc;
+    margin-left: 590px;
+    padding:10px 25px;
+    display: block;          /* Ensures it takes full width */
+    text-align: center;      /* Centers the text inside */
+    width: 10%; 
+    /* border-width: 10px;            Spans across the screen */
+}
+.hire-btn{
+    padding:12px 20px;
+    /* width: 40px; */
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    background:linear-gradient(45deg,#8d5cff,#00d9ff);
+}
+
+
+button {
+  width: auto;             /* Prevents stretching */
+  padding: 10px 24px;      /* Controls size via internal spacing */
+  max-width: 150px;        /* Sets a strict upper limit */
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#05081f;
+    color:white;
+    min-height:100vh;
+    padding:40px;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+    background-size:50px 50px;
+}
+
+.achievements-section{
+    max-width:1400px;
+    margin:auto;
+}
+
+.tag{
+    width:fit-content;
+    margin:auto;
+    padding:12px 30px;
+    border-radius:30px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    letter-spacing:2px;
+    color:#d0d0d0;
+}
+
+.title{
+    text-align:center;
+    margin-top:25px;
+    margin-bottom:60px;
+    font-size:70px;
+
+    background:linear-gradient(
+    90deg,
+    #5f7fff,
+    #c05cff,
+    #00d9ff);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    padding:30px;
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+
+    background:linear-gradient(
+    45deg,
+    #c05cff,
+    #00d9ff);
+}
+
+.content h3{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.content p{
+    color:#bdbdbd;
+    font-size:17px;
+}
+
+/* Mobile */
+
+@media(max-width:1000px){
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.title{
+    font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+        <nav class="navbar">
+
+<div class="logo">✦ Faheema</div>
+
+<div class="nav-links">
+<<a href="{%url 'home'%}">Home</a>
+<a href="{%url 'about'%}">About</a>
+<a href="{%url 'education'%}">Education</a>
+<a href="{%url 'skills'%}">Skills</a>
+<a href="{%url 'experience'%}">Experience</a>
+<a href="{%url 'achievements'%}">Achievements</a>
+<a href="{%url 'contact'%}">Contact</a>
+
+</div>
+<button class="hire-btn">Hire Me</button>
+
+        </nav>
+<section class="achievements-section">
+<br>
+<div class="tag">ACHIEVEMENTS</div>
+
+<h1 class="title">Certifications & Learning</h1>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📊</div>
+<div class="content">
+<h3>Data Analytics Foundations</h3>
+<p>Online Course</p>
+</div>
+</div>
+
+<div class="card">
+<div class="icon">🗄️</div>
+<div class="content">
+<h3>SQL for Data Analysis</h3>
+<p>Self-Paced Program</p>
+</div>
+</div>
+
+<div class="card">
+<div class="icon">📈</div>
+<div class="content">
+<h3>Power BI Essentials</h3>
+<p>Workshop</p>
+</div>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<div class="content">
+<h3>Python for Beginners</h3>
+<p>Training Program</p>
+</div>
+</div>
+
+<div class="card">
+<div class="icon">📑</div>
+<div class="content">
+<h3>Excel for Analysts</h3>
+<p>Online Course</p>
+</div>
+</div>
+
+<div class="card">
+<div class="icon">🏅</div>
+<div class="content">
+<h3>Google Data Analytics</h3>
+<p>In Progress</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

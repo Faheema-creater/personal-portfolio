@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education</title>
+
+<style>
+
+.tag {
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    color:#ccc;
+    margin-left: 490px;
+    padding:10px 25px;
+    display: block;          /* Ensures it takes full width */
+    text-align: center;      /* Centers the text inside */
+    width: 15%; 
+    /* border-width: 10px;            Spans across the screen */
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#05081f;
+    color:white;
+    min-height:100vh;
+    padding:20px;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+    background-size:50px 50px;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#b26cff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#d8d8d8;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00d9ff;
+}
+
+.hire-btn{
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    background:linear-gradient(45deg,#8f5cff,#00d9ff);
+}
+
+/* TITLE */
+
+.title{
+    text-align:center;
+    margin-top:30px;
+}
+
+.title h1{
+    font-size:70px;
+    font-weight:bold;
+
+    background:linear-gradient(
+    90deg,
+    #5f7fff,
+    #b35cff,
+    #00d9ff);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* TIMELINE */
+
+.timeline{
+    position:relative;
+    max-width:1100px;
+    margin:70px auto;
+}
+
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:4px;
+    background:#00d9ff;
+    top:0;
+    bottom:0;
+    left:50%;
+    margin-left:-2px;
+}
+
+/* BOXES */
+
+.container{
+    padding:20px 40px;
+    position:relative;
+    width:50%;
+}
+
+.left{
+    left:0;
+}
+
+.right{
+    left:50%;
+}
+
+.card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.card h4{
+    color:#00d9ff;
+    margin-bottom:15px;
+}
+
+.card h2{
+    margin-bottom:15px;
+    line-height:1.4;
+}
+
+.card p{
+    color:#d8d8d8;
+    line-height:1.8;
+}
+
+/* DOTS */
+
+.container::after{
+    content:'';
+    position:absolute;
+    width:22px;
+    height:22px;
+    background:linear-gradient(
+    45deg,
+    #b35cff,
+    #00d9ff);
+
+    border-radius:50%;
+    top:40px;
+    z-index:10;
+}
+
+.left::after{
+    right:-12px;
+}
+
+.right::after{
+    left:-12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.timeline::after{
+    left:20px;
+}
+
+.container{
+    width:100%;
+    padding-left:60px;
+    padding-right:20px;
+}
+
+.right,
+.left{
+    left:0;
+}
+
+.left::after,
+.right::after{
+    left:8px;
+}
+
+.title h1{
+    font-size:45px;
+}
+
+.nav-links{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+
+<div class="logo">✦ Faheema</div>
+
+<div class="nav-links">
+<a href="{%url 'home'%}">Home</a>
+<a href="{%url 'about'%}">About</a>
+<a href="{%url 'education'%}">Education</a>
+<a href="{%url 'skills'%}">Skills</a>
+<a href="{%url 'experience'%}">Experience</a>
+<a href="{%url 'achievements'%}">Achievements</a>
+<a href="{%url 'contact'%}">Contact</a>
+</div>
+
+<button class="hire-btn">Hire Me</button>
+
+</nav>
+<br>
+<div class="tag">EDUCATION</div>
+<div class="title">
+<h1>Academic Journey</h1>
+</div>
+
+<div class="timeline">
+
+<div class="container left">
+<div class="card">
+
+<h4>2024 — 2027</h4>
+
+<h2>Bachelor of Computer Applications (BCA)</h2>
+
+<p>
+MMES Women's Arts and Science College
+</p>
+
+<br>
+
+<p>
+• Core CS foundations — Programming, Databases and Web Technologies
+</p>
+
+<p>
+• Relevant coursework: DBMS, Statistics and Data Structures
+</p>
+
+<p>
+• Focus on SQL, Excel, Power BI and Data Analytics
+</p>
+
+</div>
+</div>
+
+<div class="container right">
+<div class="card">
+
+<h4>ONGOING</h4>
+
+<h2>Self-Paced Data Analytics Track</h2>
+
+<p>
+Online Learning & Certifications
+</p>
+
+<br>
+
+<p>
+• SQL, Python, Excel, Power BI and Tableau
+</p>
+
+<p>
+• Data Cleaning & Visualization
+</p>
+
+<p>
+• Dashboard Development & Reporting
+</p>
+
+</div>
+</div>
+
+<div class="container left">
+<div class="card">
+
+<h4>2025</h4>
+
+<h2>Data Analytics Certification</h2>
+
+<p>
+Completed a 30-Day Data Analytics Program.
+</p>
+
+<br>
+
+<p>
+• Data Analysis Fundamentals
+</p>
+
+<p>
+• Excel & Power BI Projects
+</p>
+
+<p>
+• Data Visualization Techniques
+</p>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

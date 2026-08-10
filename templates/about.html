@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#05081f;
+    color:white;
+    min-height:100vh;
+    padding:20px;
+    background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size:50px 50px;
+}
+
+/* Navbar */
+
+.navbar{
+    width:100%;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#9b5cff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#d7d7d7;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#9b5cff;
+}
+
+.hire-btn{
+    background:linear-gradient(45deg,#9b5cff,#00d4ff);
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:25px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* About Section */
+
+.about{
+    margin-top:17px;
+    text-align:center;
+}
+
+.tag{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.05);
+    color:#d7d7d7;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.about h1{
+    font-size:60px;
+    margin-bottom:50px;
+    background:linear-gradient(90deg,#6da8ff,#b64cff,#00d4ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Cards Layout */
+
+.content{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.left-card{
+    flex:1;
+    min-width:600px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:30px;
+    padding:40px;
+    text-align:left;
+    line-height:1.8;
+    color:#d7d7d7;
+}
+
+.left-card p{
+    margin-bottom:25px;
+    font-size:22px;
+}
+
+.right-cards{
+    width:380px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.info-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    padding:25px;
+    text-align:left;
+}
+
+.info-card h4{
+    color:#a7a7a7;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.info-card p{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:linear-gradient(45deg,#9b5cff,#00d4ff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+@media(max-width:1100px){
+
+.left-card{
+    min-width:100%;
+}
+
+.right-cards{
+    width:100%;
+}
+
+.about h1{
+    font-size:40px;
+}
+}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">✦ Faheema</div>
+
+    <div class="nav-links">
+        <a href="{%url 'home'%}">Home</a>
+        <a href="{%url 'about'%}">About</a>
+        <a href="{%url 'education'%}">Education</a>
+        <a href="{%url 'skills'%}">Skills</a>
+        <a href="{%url 'experience'%}">Experience</a>
+        <a href="{%url 'achievements'%}">Achievements</a>
+        <a href="{%url 'contact'%}">Contact</a>
+
+    </div>
+
+    <button class="hire-btn">Hire Me</button>
+</nav>
+
+<section class="about">
+
+    <div class="tag">ABOUT ME</div>
+
+    <h1>Curious mind, data-driven heart</h1>
+
+    <div class="content">
+
+        <div class="left-card">
+            <p>
+                I'm currently pursuing a Bachelor of Computer
+                Applications (BCA) and building expertise in
+                data analysis, business intelligence,
+                visualization and web technologies.
+            </p>
+
+            <p>
+                I love the moment when scattered numbers click
+                into a story and meaningful insights emerge.
+            </p>
+
+            <p>
+                My goal is to help businesses solve real
+                problems through data by designing dashboards,
+                writing SQL queries and turning information
+                into action.
+            </p>
+        </div>
+
+        <div class="right-cards">
+
+            <div class="info-card">
+                <div class="icon">🧠</div>
+                <h4>CAREER GOAL</h4>
+                <p>Become a confident Data Analyst.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">📊</div>
+                <h4>PASSION</h4>
+                <p>Analytics, BI Dashboards & Visualization.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">🎓</div>
+                <h4>STATUS</h4>
+                <p>BCA Student — Class of 2027.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
