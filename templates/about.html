@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me</title>
+<title>About Faheema MZ | Data Analyst</title>
 
 <style>
 *{
@@ -18,7 +18,7 @@ body{
     background:#05081f;
     color:white;
     min-height:100vh;
-    padding:20px;
+    padding:100px 40px 40px;
     background-image:
     linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
@@ -28,15 +28,22 @@ body{
 /* Navbar */
 
 .navbar{
-    width:100%;
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,0.1);
-    border-radius:25px;
-    padding:15px 30px;
+    position:fixed;
+    top:15px;
+    left:30px;
+    right:30px;
+    z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
+    padding:15px 30px;
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
 }
 
 .logo{
@@ -62,15 +69,16 @@ body{
 }
 
 .hire-btn{
-    background:linear-gradient(45deg,#9b5cff,#00d4ff);
-    color:white;
+    display:inline-block;
+    padding:12px 20px;
     border:none;
-    padding:12px 25px;
-    border-radius:25px;
-    cursor:pointer;
+    border-radius:30px;
+    color:white;
     font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    background:linear-gradient(45deg,#8d5cff,#00d9ff);
 }
-
 /* About Section */
 
 .about{
@@ -90,7 +98,7 @@ body{
 }
 
 .about h1{
-    font-size:60px;
+    font-size:52px;
     margin-bottom:50px;
     background:linear-gradient(90deg,#6da8ff,#b64cff,#00d4ff);
     -webkit-background-clip:text;
@@ -174,6 +182,9 @@ body{
 .about h1{
     font-size:40px;
 }
+.left-card p{
+    font-size:16px;
+}
 }
 </style>
 
@@ -194,36 +205,34 @@ body{
 
     </div>
 
-    <button class="hire-btn">Hire Me</button>
+    <a href="{%url 'contact'%}" class="hire-btn">Hire Me</a>
 </nav>
 
 <section class="about">
-
-    <div class="tag">ABOUT ME</div>
-
-    <h1>Curious mind, data-driven heart</h1>
-
-    <div class="content">
+ <div class="tag">ABOUT ME</div>
+ <h1>ABOUT ME</h1>
+ <div class="content">
 
         <div class="left-card">
             <p>
-                I'm currently pursuing a Bachelor of Computer
-                Applications (BCA) and building expertise in
-                data analysis, business intelligence,
-                visualization and web technologies.
+    I'm currently pursuing a Bachelor of Computer Applications
+    (BCA) and developing practical skills in data analysis,
+    visualization and business intelligence. My primary career
+    goal is to begin my career as a Data Analyst.
             </p>
 
             <p>
-                I love the moment when scattered numbers click
-                into a story and meaningful insights emerge.
-            </p>
+    I enjoy exploring datasets, finding patterns and turning
+    raw information into clear and meaningful insights.
+    I am continuously improving my analytical and problem-solving skills.
+</p>
 
             <p>
-                My goal is to help businesses solve real
-                problems through data by designing dashboards,
-                writing SQL queries and turning information
-                into action.
-            </p>
+    I am building hands-on experience with Python, SQL,
+    Excel, Power BI and Tableau through learning and projects.
+    I want to apply these skills to real-world business
+    problems and communicate data-driven insights clearly.
+</p>
         </div>
 
         <div class="right-cards">
@@ -231,19 +240,20 @@ body{
             <div class="info-card">
                 <div class="icon">🧠</div>
                 <h4>CAREER GOAL</h4>
-                <p>Become a confident Data Analyst.</p>
+                <p>Build a strong career in Data Analytics.</p>
             </div>
 
             <div class="info-card">
                 <div class="icon">📊</div>
                 <h4>PASSION</h4>
-                <p>Analytics, BI Dashboards & Visualization.</p>
+                <p>Data Analysis, Visualization & Business Intelligence.</p>
             </div>
 
             <div class="info-card">
                 <div class="icon">🎓</div>
                 <h4>STATUS</h4>
                 <p>BCA Student — Class of 2027.</p>
+                <p>Thiruvalluvar Univarcity</p>
             </div>
 
         </div>

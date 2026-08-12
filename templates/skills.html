@@ -4,20 +4,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skills</title>
+<title>Skills | Faheema MZ - Data Analyst</title>
 
 <style>
 .navbar{
+    position:fixed;
+    top:15px;
+    left:30px;
+    right:30px;
+    z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:15px 30px;
     border-radius:25px;
+
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(15px);
     border:1px solid rgba(255,255,255,0.1);
 }
-
 .logo{
     font-size:24px;
     font-weight:bold;
@@ -39,29 +46,27 @@
     color:#00d9ff;
 }
 .tag {
-    align-self: center;
     border:1px solid rgba(255,255,255,0.1);
     border-radius:25px;
     background:rgba(255,255,255,0.05);
     color:#ccc;
-    margin-left: 500px;
     padding:10px 25px;
-    display: block;
-    text-align: center;
-    width: 10%; 
+    display:block;
+    text-align:center;
+    width:fit-content;
+    margin:0 auto;
 }
-
 .hire-btn{
+    display:inline-block;
     padding:12px 20px;
     border:none;
     border-radius:30px;
     color:white;
     font-weight:bold;
     cursor:pointer;
+    text-decoration:none;
     background:linear-gradient(45deg,#8d5cff,#00d9ff);
 }
-
-
 button {
   width: auto;
   padding: 10px 24px;
@@ -79,8 +84,7 @@ body{
     background:#05081f;
     color:white;
     min-height:100vh;
-    padding:40px;
-
+    padding:100px 40px 40px;
     background-image:
     linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
@@ -95,7 +99,7 @@ body{
 
 .title{
     text-align:center;
-    font-size:70px;
+    font-size:56px;
     margin-bottom:50px;
 
     background:linear-gradient(
@@ -137,13 +141,20 @@ body{
 .skill-info{
     display:flex;
     justify-content:space-between;
+    align-items:center;
+    gap:15px;
     margin-bottom:10px;
-    font-size:18px;
+    font-size:17px;
+}
+.skill-info span:last-child{
+    color:#fdfdfd;
+    font-size:14px;
+    white-space:nowrap;
 }
 
 .progress{
     width:100%;
-    height:12px;
+    height:8px;
     background:#252d4a;
     border-radius:20px;
 }
@@ -193,13 +204,17 @@ body{
 }
 
 .title{
-    font-size:45px;
+    font-size:40px;
 }
 
 .tech-boxes{
     flex-direction:column;
 }
 
+}
+span{
+    font: size 50px;
+    color:#ffffff;
 }
 
 </style>
@@ -225,7 +240,7 @@ body{
 
 <br>
 
-<button class="hire-btn">Hire Me</button>
+<a href="{%url 'contact'%}" class="hire-btn">Hire Me</a>
 
 </nav>
 
@@ -234,7 +249,7 @@ body{
 
 <br>
 
-<div class="tag" style="align-items: center;">SKILLS</div>
+<div class="tag">SKILLS</div>
 
 <br>
 
@@ -255,7 +270,7 @@ body{
 <div class="skill-info">
 
 <span>Data Analysis</span>
-<span>80%</span>
+<span>Working Knowledge</span>
 
 </div>
 
@@ -273,7 +288,7 @@ body{
 <div class="skill-info">
 
 <span>Microsoft Excel</span>
-<span>85%</span>
+<span>Working knowledge</span>
 
 </div>
 
@@ -291,7 +306,7 @@ body{
 <div class="skill-info">
 
 <span>SQL</span>
-<span>75%</span>
+<span>Working knowledge</span>
 
 </div>
 
@@ -309,7 +324,7 @@ body{
 <div class="skill-info">
 
 <span>Python</span>
-<span>70%</span>
+<span>Working knowledge</span>
 
 </div>
 
@@ -327,7 +342,7 @@ body{
 <div class="skill-info">
 
 <span>Power BI</span>
-<span>72%</span>
+<span>Working knowledge</span>
 
 </div>
 
@@ -345,7 +360,7 @@ body{
 <div class="skill-info">
 
 <span>Tableau</span>
-<span>68%</span>
+<span>Working knowledge</span>
 
 </div>
 

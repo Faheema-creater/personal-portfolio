@@ -19,7 +19,7 @@ body{
     background:#05081f;
     color:white;
     min-height:100vh;
-    padding:20px;
+    padding:100px 40px 40px;
 
     background-image:
     linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
@@ -31,16 +31,23 @@ body{
 /* Navbar */
 
 .navbar{
+    position:fixed;
+    top:15px;
+    left:30px;
+    right:30px;
+    z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:15px 30px;
     border-radius:25px;
+
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(15px);
     border:1px solid rgba(255,255,255,0.1);
 }
-
 .logo{
     font-size:24px;
     font-weight:bold;
@@ -63,15 +70,16 @@ body{
 }
 
 .hire-btn{
-    padding:12px 28px;
+    display:inline-block;
+    padding:12px 20px;
     border:none;
     border-radius:30px;
     color:white;
     font-weight:bold;
     cursor:pointer;
+    text-decoration:none;
     background:linear-gradient(45deg,#8d5cff,#00d9ff);
 }
-
 /* Heading */
 
 .heading{
@@ -164,9 +172,11 @@ body{
 }
 
 .nav-links{
-    display:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
 }
-
 }
 
 </style>
@@ -187,7 +197,7 @@ body{
 <a href="{%url 'contact'%}">Contact</a>
 </div>
 
-<button class="hire-btn">Hire Me</button>
+<a href="{%url 'contact'%}" class="hire-btn">Hire Me</a>
 
 </nav>
 
@@ -195,7 +205,7 @@ body{
 
 <div class="tag">EXPERIENCE</div>
 
-<h1>Where I am now</h1>
+<h1>My Professional journey</h1>
 
 </section>
 
@@ -205,13 +215,13 @@ body{
 
 <div class="icon">🎁</div>
 
-<h2>Fresher</h2>
+<h2>Data Analytics Fresher</h2>
 
 <p>
-Starting my professional journey with curiosity,
-dedication and a strong desire to learn.
+I am a BCA student building practical skills in
+data analysis, visualization and business intelligence
+while preparing for my first professional opportunity.
 </p>
-
 </div>
 
 <div class="card">

@@ -4,15 +4,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home</title>
+<title>Faheema MZ | Data Analyst Portfolio</title>
 
 <style>
 .navbar{
+    position:fixed;
+    top:15px;
+    left:30px;
+    right:30px;
+    z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:15px 30px;
     border-radius:25px;
+
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(15px);
     border:1px solid rgba(255,255,255,0.1);
@@ -50,11 +58,6 @@
 }
 
 
-button {
-  width: auto;             /* Prevents stretching */
-  padding: 10px 24px;      /* Controls size via internal spacing */
-  max-width: 150px;        /* Sets a strict upper limit */
-}
 
 *{
     margin:0;
@@ -67,8 +70,7 @@ body{
     background:#05081f;
     color:white;
     min-height:100vh;
-    padding:30px;
-
+    padding:100px 40px 40px;
     background-image:
     linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
@@ -107,7 +109,7 @@ body{
 }
 
 .hero h1{
-    font-size:90px;
+    font-size:clamp(52px, 7vw, 82px);
     line-height:1.1;
     margin-bottom:25px;
 }
@@ -128,6 +130,17 @@ body{
     line-height:1.8;
     color:#cfcfcf;
     max-width:800px;
+}
+.hire-btn{
+    display:inline-block;
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    background:linear-gradient(45deg,#8d5cff,#00d9ff);
 }
 
 .buttons{
@@ -173,8 +186,8 @@ body{
 }
 
 .hero-image img{
-    width:550px;
-    height:550px;
+    width:480px;
+    height:480px;
     object-fit:cover;
     border-radius:50%;
     border:8px solid #9b5cff;
@@ -227,7 +240,7 @@ body{
 <a href="{%url 'contact'%}">Contact</a>
 </div>
 <br>
-<button class="hire-btn">Hire Me</button>
+<a href="{%url 'contact'%}" class="hire-btn">Hire Me</a>
 
 </nav>
 
@@ -247,9 +260,10 @@ Data Analyst
 </h1>
 
 <p>
-I'm an aspiring Data Analyst and BCA student passionate
-about turning raw data into actionable insights through
-analytics, visualization and problem-solving.
+I'm a BCA student building practical skills in data analysis,
+visualization and business intelligence. I use Python, SQL,
+Excel, Power BI and Tableau to explore data, identify patterns
+and communicate insights.
 </p>
 
 <div class="buttons">
@@ -258,11 +272,11 @@ analytics, visualization and problem-solving.
 ⬇ Download Resume
 </a>
 
-<a href="contact.html" class="btn contact-btn">
+<a href="{%url 'contact'%}" class="btn contact-btn">
 ✉ Contact Me
 </a>
 
-<a href="skills.html" class="skills-link">
+<a href="{%url 'skills'%}" class="skills-link">
 View Skills →
 </a>
 
